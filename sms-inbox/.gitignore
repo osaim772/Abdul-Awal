@@ -1,0 +1,11 @@
+data/
+.env
+__pycache__/
+android/.gradle/
+android/local.properties
+android/**/build/
+
+cloudflare/node_modules/
+cloudflare/.wrangler/
+cloudflare/.worker-build/
+cloudflare/.dev.vars

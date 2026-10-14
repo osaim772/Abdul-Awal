@@ -1,0 +1,21 @@
+# Optional deployment blueprint. The paid Starter plan is needed for a persistent disk.
+# Review Render's current pricing before creating this service.
+services:
+  - type: web
+    name: osaim-private-sms
+    runtime: python
+    plan: starter
+    buildCommand: python3 -m py_compile server.py
+    startCommand: python3 server.py
+    healthCheckPath: /
+    disk:
+      name: private-sms-data
+      mountPath: /var/data/sms
+      sizeGB: 1
+    envVars:
+      - key: SMS_ADMIN_PASSWORD
+        sync: false
+      - key: SMS_BIND_HOST
+        value: 0.0.0.0
+      - key: SMS_DATA_DIR
+        value: /var/data/sms

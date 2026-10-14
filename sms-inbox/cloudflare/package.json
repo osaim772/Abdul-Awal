@@ -1,0 +1,21 @@
+{
+  "name": "osaim-private-sms-cloudflare",
+  "version": "1.0.0",
+  "description": "Private SMS inbox for iPhone with Android senders",
+  "scripts": {
+    "test": "node test.mjs",
+    "check:deploy": "wrangler deploy --dry-run --outdir .worker-build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "miniflare": "4.20260730.0",
+    "wrangler": "4.150.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,7 @@
+CREATE TABLE devices(id TEXT PRIMARY KEY, label TEXT NOT NULL, token TEXT UNIQUE NOT NULL);
+CREATE TABLE messages(id INTEGER PRIMARY KEY, device TEXT NOT NULL, event TEXT NOT NULL,
+ sender TEXT NOT NULL, body TEXT NOT NULL, received INTEGER NOT NULL, created INTEGER NOT NULL,
+ UNIQUE(device,event));
+CREATE INDEX messages_created ON messages(created);
+CREATE TABLE sessions(token TEXT PRIMARY KEY, expires INTEGER NOT NULL);
+CREATE TABLE attempts(ip TEXT PRIMARY KEY, count INTEGER NOT NULL, reset INTEGER NOT NULL);

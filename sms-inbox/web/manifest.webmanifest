@@ -1,0 +1,1 @@
+{"name": "আমার SMS", "short_name": "SMS Inbox", "start_url": "/", "display": "standalone", "background_color": "#0c1423", "theme_color": "#0c1423", "icons": [{"src": "/logo.png", "sizes": "1254x1254", "type": "image/png", "purpose": "any"}]}
